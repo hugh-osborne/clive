@@ -1,0 +1,53 @@
+<Simulation>
+<Variable Name="TIME_END">1.0</Variable>
+<WeightType>CustomConnectionParameters</WeightType>
+<Algorithms>
+<Algorithm type="GridAlgorithmGroup" name="LIF" modelfile="lif.model" tau_refractive="0.0" transformfile="lif.tmat" start_v="-0.065" start_w="0.002" >
+<TimeStep>1e-04</TimeStep>
+</Algorithm>
+</Algorithms>
+<Nodes>
+<Node algorithm="LIF" name="BICEPS_LONG_ALPHA_GAMMA" type="NEUTRAL" />
+<Node algorithm="LIF" name="BRACHIORADIALIS_ALPHA_GAMMA" type="NEUTRAL" />
+<Node algorithm="LIF" name="TRICEPS_LONG_ALPHA_GAMMA" type="NEUTRAL" />
+<Node algorithm="LIF" name="TRICEPS_MED_ALPHA_GAMMA" type="NEUTRAL" />
+<Node algorithm="LIF" name="DELT_ANT_LONG_ALPHA_GAMMA" type="NEUTRAL" />
+<Node algorithm="LIF" name="DELT_MED_LONG_ALPHA_GAMMA" type="NEUTRAL" />
+<Node algorithm="LIF" name="DELT_POST_LONG_ALPHA_GAMMA" type="NEUTRAL" />
+<Node algorithm="LIF" name="INFRAPINATUS_ALPHA_GAMMA" type="NEUTRAL" />
+<Node algorithm="LIF" name="PEC_MED_LONG_ALPHA_GAMMA" type="NEUTRAL" />
+<Node algorithm="LIF" name="LAT_LONG_ALPHA_GAMMA" type="NEUTRAL" />
+</Nodes>
+<Connections>
+<IncomingConnection Node="BICEPS_LONG_ALPHA_GAMMA" num_connections="10" efficacy="0.001" delay="0.0" dimension="0"/>
+<IncomingConnection Node="BRACHIORADIALIS_ALPHA_GAMMA" num_connections="10" efficacy="0.001" delay="0.0" dimension="0"/>
+<IncomingConnection Node="TRICEPS_LONG_ALPHA_GAMMA" num_connections="10" efficacy="0.001" delay="0.0" dimension="0" />
+<IncomingConnection Node="TRICEPS_MED_ALPHA_GAMMA" num_connections="10" efficacy="0.001" delay="0.0" dimension="0" />
+<IncomingConnection Node="DELT_ANT_LONG_ALPHA_GAMMA" num_connections="10" efficacy="0.001" delay="0.0" dimension="0"/>
+<IncomingConnection Node="DELT_MED_LONG_ALPHA_GAMMA" num_connections="10" efficacy="0.001" delay="0.0" dimension="0" />
+<IncomingConnection Node="DELT_POST_LONG_ALPHA_GAMMA" num_connections="10" efficacy="0.001" delay="0.0" dimension="0"/>
+<IncomingConnection Node="INFRAPINATUS_ALPHA_GAMMA" num_connections="10" efficacy="0.001" delay="0.0" dimension="0"/>
+<IncomingConnection Node="PEC_MED_LONG_ALPHA_GAMMA" num_connections="10" efficacy="0.001" delay="0.0" dimension="0" />
+<IncomingConnection Node="LAT_LONG_ALPHA_GAMMA" num_connections="10" efficacy="0.001" delay="0.0" dimension="0"/>
+
+<OutgoingConnection Node="BICEPS_LONG_ALPHA_GAMMA"/>
+<OutgoingConnection Node="BRACHIORADIALIS_ALPHA_GAMMA"/>
+<OutgoingConnection Node="TRICEPS_LONG_ALPHA_GAMMA"/>
+<OutgoingConnection Node="TRICEPS_MED_ALPHA_GAMMA"/>
+<OutgoingConnection Node="DELT_ANT_LONG_ALPHA_GAMMA"/>
+<OutgoingConnection Node="DELT_MED_LONG_ALPHA_GAMMA"/>
+<OutgoingConnection Node="DELT_POST_LONG_ALPHA_GAMMA"/>
+<OutgoingConnection Node="INFRAPINATUS_ALPHA_GAMMA"/>
+<OutgoingConnection Node="PEC_MED_LONG_ALPHA_GAMMA"/>
+<OutgoingConnection Node="LAT_LONG_ALPHA_GAMMA"/>
+</Connections>
+<Reporting>
+<!--<Display node="BICEPS_LONG_ALPHA_GAMMA" />-->
+</Reporting>
+<SimulationRunParameter>
+<SimulationName>lif</SimulationName>
+<t_end>TIME_END</t_end>
+<t_step>0.0002</t_step>
+<name_log>lif.log</name_log>
+</SimulationRunParameter>
+</Simulation>
